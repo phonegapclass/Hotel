@@ -1,5 +1,6 @@
 //Servidor
 function enviarDatos(nom,mail,tel,foto){
+    alert(1);
 	$.ajax({
 		type: "POST",
 		url: "http://www.igitsoft.com/pgtest.php",
