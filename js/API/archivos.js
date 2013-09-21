@@ -16,9 +16,10 @@ function subirFoto(foto) {
 	ft.upload(foto, "http://www.igitsoft.com/pgtest.php", function(r){
 		navigator.notification.confirm("Se ha registrado Satisfactoriamente",function(btn){
 			if(btn==1)
-				navigator.notification.vibrate(500);
+                navigator.notification.vibrate(500);
 			if(btn==2)
 				navigator.notification.beep(2);
+            altaUsuario();
 			window.location.href="#page";
 		}, "Registro", "Vibrar,Sonar,Cancelar");
 	}, function(error) {

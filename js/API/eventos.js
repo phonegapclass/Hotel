@@ -1,7 +1,8 @@
 //Eventos
 $(document).ready(function(){
 	document.addEventListener("deviceready",function(){
-		window.location.href="#registro";
+        if(!usuarioExiste())
+            window.location.href="#registro";
 		$('#regEnv').tap(function(){
 			var nom = $('#regNom').val();
 			var mail = $('#regEmail').val();
@@ -17,5 +18,29 @@ $(document).ready(function(){
 		$('#regFoto').tap(function(){
 			tomarFoto();
 		});
+        
+        //Crear Reservas
+        $('#nr1 ul[data-role=listview] li').tap(function(){
+            var btn = $(this);
+            if(btn.index()!=0){
+                $('#nr1').attr('th',btn.index());
+                btn.css('background','green');
+            }
+        });
+        $('#resSig').tap(function(){
+            if($('#nr1').attr('th')!=undefined)
+                window.location.href="#nr2";
+        });
+        $('#resEnv').tap(function(){
+            var th=$('#nr1').attr('th');
+            var pr=$('#resPer').val();
+            var ha=$('#resHab').val();
+            var di=$('#resDia').val();
+            
+            if(estaConectado())
+                //subir los datos
+            else
+                //Guardar localmente
+        });
 	}, false);
 });
