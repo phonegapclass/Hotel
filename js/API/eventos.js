@@ -38,9 +38,9 @@ $(document).ready(function(){
             var di=$('#resDia').val();
             
             if(estaConectado())
-                //subir los datos
+                var a;//subir los datos
             else
-                //Guardar localmente
+                var b;//Guardar localmente
         });
 	}, false);
 });
