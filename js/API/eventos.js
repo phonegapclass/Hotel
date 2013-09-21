@@ -36,7 +36,7 @@ $(document).ready(function(){
             var pr=$('#resPer').val();
             var ha=$('#resHab').val();
             var di=$('#resDia').val();
-            
+            alert(1);
             if(estaConectado())
                 var a;//subir los datos
             else
