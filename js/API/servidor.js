@@ -6,6 +6,7 @@ function enviarDatos(nom,mail,tel,foto){
 		url: "http://www.igitsoft.com/pgtest.php",
 		data: "nom="+nom+"&mail="+mail+"&tel="+tel
 	}).done(function(msg){
+        alert(msg);
 		if(msg==1){
 			subirFoto(foto);
 		}else{
