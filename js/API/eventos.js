@@ -10,6 +10,7 @@ $(document).ready(function(){
 			var foto = $('#regFoto').attr('foto');
 			
 			if(nom != '' && mail != '' && tel != ''/* && foto != '' && foto != undefined*/){
+                alert(nom+','+mail+','+tel);
 				enviarDatos(nom,mail,tel,foto);
 			}else{
 				navigator.notification.alert("Todos los Campos son requeridos", null, 'Registro','Aceptar');
