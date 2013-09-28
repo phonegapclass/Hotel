@@ -74,6 +74,7 @@ function leerHistorial(){
 				table += '<tr><td>'+th+'</td><td>'+pr+'</td><td>'+ha+'</td><td>'+di+'</td></tr>';
 			}
 			table += '</table>';
+			$('#historial div[data-role=content]').html(table);
 		},function(err){
 			alert('Error: '+err.code);	
 		});
