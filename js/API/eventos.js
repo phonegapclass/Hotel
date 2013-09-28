@@ -1,7 +1,7 @@
 //Eventos
 $(document).ready(function(){
 	document.addEventListener("deviceready",function(){
-        /*if(!usuarioExiste())*/
+        if(!usuarioExiste())
             window.location.href="#registro";
 		$('#regEnv').tap(function(){
 			var nom = $('#regNom').val();
