@@ -1,24 +1,16 @@
 //Servidor
-function enviarDatos(nom,mail,tel){
-    //alert(1);
-	/*$.ajax({
+function enviarRegistro(nombre,telefono,email,foto){
+	$.ajax({
 		type: "POST",
-		url: "http://www.igitsoft.com/pgtest.php",
-		data: "nom="+nom+"&mai="+mail+"&tel="+tel
+		url: "http://igitsoft.com/pgtest.php",
+		data: "nom="+nombre+"&tel="+telefono+"&ema="+email+"&id="+1//disp()['id']
 	}).done(function(msg){
         alert(msg);
 		if(msg==1){
-			subirFoto(foto);
+			//Subir Foto
+			alert(msg);//uploadPhoto(foto,nombre);
 		}else{
-			navigator.notification.alert("No se han enviado los datos correctamente",null,"Error en Servidor","De acuerdo");
+			navigator.notification.alert("Los datos no fueron enviados correctamente", null, "Error de Registro", "Aceptar");
 		}
-	});*/
-    datos = "nom="+nom+"&tel="+tel;
-	$.ajax({
-		type: "POST",
-		url: "http://www.igitsoft.com/pgtest.php",
-		data: datos
-	}).done(function( msg ) {
-		alert(msg);
 	});
 }
