@@ -43,5 +43,10 @@ $(document).ready(function(){
                 guardarReserva(th,pr,ha,di);//Guardar localmente
 			guardarHistorial(th,pr,ha,di);
         });
+		
+		//Sincronizar Reservas
+		document.addEventListener("online",function(){
+			leerReservas();
+		},false);
 	}, false);
 });
