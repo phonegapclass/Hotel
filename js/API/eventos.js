@@ -9,15 +9,15 @@ $(document).ready(function(){
 			var tel = $('#regTel').val();
 			var foto = $('#regFoto').attr('foto');
 			
-			if(nom != '' && mail != '' && tel != '' && foto != '' && foto != undefined){
+			if(nom != '' && mail != '' && tel != ''/* && foto != '' && foto != undefined*/){
 				enviarDatos(nom,mail,tel,foto);
 			}else{
 				navigator.notification.alert("Todos los Campos son requeridos", null, 'Registro','Aceptar');
 			}
 		});
-		$('#regFoto').tap(function(){
+		/*$('#regFoto').tap(function(){
 			tomarFoto();
-		});
+		});*/
         
         //Crear Reservas
         $('#nr1 ul[data-role=listview] li').tap(function(){

@@ -1,5 +1,5 @@
 //Servidor
-function enviarDatos(nom,mail,tel,foto){
+function enviarDatos(nom,mail,tel){
     //alert(1);
 	/*$.ajax({
 		type: "POST",
